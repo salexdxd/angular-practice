@@ -1,0 +1,6 @@
+<p>product works!</p>
+<app-navbar></app-navbar>
+<br>
+<mat-list role="list" >
+  <mat-list-item role="listitem" *ngFor = 'let pr of products'>{{ pr | json }}</mat-list-item>
+</mat-list>

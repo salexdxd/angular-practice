@@ -13,23 +13,9 @@ export class AppComponent implements OnInit {
 
   public products: any;
 
-  constructor(private apiService: ApiService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.getProducts();
-  }
-
-  public getProducts(): void {
-    this.apiService.getProducts().subscribe({
-      next: (res: any) => {
-        console.log(res)
-        this.products = res; 
-        console.log(this.products);
-      },
-      error: (e) => alert(e.message),
-      complete: () => console.log('completed')
-    })
-  }
+  ngOnInit() { }
 }
 
 

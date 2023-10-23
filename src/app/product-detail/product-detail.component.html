@@ -1,0 +1,11 @@
+<p>product-detail works!</p>
+<app-navbar></app-navbar>
+
+<input placeholder="Product Id" type="number" [(ngModel)] = "prId">
+<button 
+mat-flat-button 
+[routerLink] = "['/products', prId]" 
+(click)="onGetProduct(prId)"
+>
+product by id</button>
+<div>{{ product | json }}</div>
